@@ -132,6 +132,8 @@ jobs:
       #   uses: actions/download-artifact@v4
       #   with:
       #     name: dist
+      - name: Checkout current repo
+        uses: actions/checkout@v4   # 加这一步，checkout 的是本仓库（含 pm2/ 目录）
 
       - name: Restore cached Build Artifacts
         id: cache-primes-restore
